@@ -49,7 +49,7 @@ async function loadTest() {
   //fetch test from markdown
 
   const testMarkdown = await fetch(
-    `/test-database/${testKey}/${currentQuestionNumber}.md`
+    `./test-database/${testKey}/${currentQuestionNumber}.md`
   );
 
   const testContent = await testMarkdown.text();
