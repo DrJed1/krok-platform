@@ -35,7 +35,7 @@ btnStart.addEventListener("click", function () {
 });
 
 async function loadTotalNumberOfQuestions() {
-  const firstQuestion = await fetch(`/test-database/${testKey}/1.md`);
+  const firstQuestion = await fetch(`./test-database/${testKey}/1.md`);
   const firstQuestionContent = await firstQuestion.text();
   const parsedData = grayMatter(firstQuestionContent);
   document.getElementById("totalNumberOfQuestions").innerHTML =
