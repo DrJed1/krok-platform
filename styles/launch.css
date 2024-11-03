@@ -1,0 +1,167 @@
+/* USED ONLY IN KEYFORM */
+.key-container {
+  max-width: 20em;
+  max-height: 20em;
+  border: 1px solid whitesmoke;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.75em;
+  padding: 1em;
+  margin: auto;
+  margin-top: 5rem !important;
+}
+
+.key-buttons-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0.75em;
+  padding: 1em;
+}
+.key-buttons-container button {
+  border: none;
+  border-radius: 10px;
+  background-color: #406453;
+  color: whitesmoke;
+  cursor: pointer;
+  padding: 0.5em;
+  transition: 0.3s;
+}
+.key-buttons-container button:hover{
+  background-color: #40645399
+}
+
+/* APPLICATION ITSELF */
+
+.navigator-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 5vh;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  background-color: #406453;
+}
+.navigator-container * {
+  background-color: #406453;
+  color: whitesmoke;
+  font-weight: 500;
+}
+
+.content-container {
+  display: flex;
+  margin-top: 4vh;
+  flex-direction: column;
+}
+
+.test-container {
+  padding: 1em;
+  background-color: #f0f0f050;
+  height: 100%;
+}
+.test-container * {
+  width: auto;
+  background-color: #f0f0f000;
+}
+.test-container ul {
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+}
+.test-container ul li {
+  margin-bottom: 0.5rem;
+}
+.correct::before {
+  content: "✔";
+  color: #406453;
+  position: absolute;
+  font-size: 1.3rem;
+  left: 6px;
+  margin-top: -10px;
+}
+.wrong::before {
+  content: "✖";
+  color: red;
+  position: absolute;
+  font-size: 1.3rem;
+  left: 6px;
+  margin-top: -10px;
+}
+#answerBtn {
+  padding: 0.75em;
+  color: whitesmoke;
+  border: none;
+  border-radius: 10px;
+  background-color: #406453;
+  transition: 0.3s;
+  cursor: pointer;
+}
+#answerBtn:hover {
+  background-color: #40645399;
+}
+#isCorrect {
+  color: #406453;
+  font-weight: bold;
+}
+
+.explanation-container {
+  padding: 1rem;
+  margin-bottom: 6vh;
+}
+#explanation-header {
+  display: none;
+}
+#explanation-content{
+  display:none;
+}
+.explanation-container ul {
+  list-style: none;
+}
+.explanation-container ul li::before {
+  content: "• ";
+  color: black;
+  font-size: 1em;
+  margin-right: 5px;
+}
+
+.bottom-buttons {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  height: 6vh;
+  width: 100%;
+  text-align: center;
+  bottom: 0;
+}
+.bottom-buttons button {
+  padding: 0.5em;
+  color: whitesmoke;
+  border: none;
+  border-radius: 10px;
+  background-color: #406453;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.bottom-buttons button:hover{
+  background-color: #40645399;
+}
+.results-container{
+  display: none;
+  text-align: center;
+  padding:5em 0.5em;
+}
+@media (min-width: 1100px) {
+  .content-container {
+    flex-direction: row;
+  }
+  .test-container {
+    width: 40%;
+  }
+  .explanation-container {
+    width: 60%;
+  }
+}

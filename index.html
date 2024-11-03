@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/launch.css" />
+    <title>KROK TEST-CENTER</title>
+  </head>
+  <body>
+    <div class="key-container">
+        <label for="key">Введіть ключ:</label
+        ><input type="text" name="key" id="key" />
+        <div class="key-buttons-container">
+          <button id="btnStart">Підтвердити</button>
+          <button id="btnDemo">Демо-версія</button>
+        </div>
+    </div>
+
+    <div class="app-container" style="display: none">
+      <div class="navigator-container">
+        <p>КРОК ТЕСТ-ЦЕНТР</p>
+        <p>
+          <span id="questionNumber"></span>/<span
+            id="totalNumberOfQuestions"
+          ></span>
+        </p>
+      </div>
+      <div class="content-container">
+        <div class="test-container">
+          <h2>Тест</h2>
+          <p id="question"></p>
+          <ul>
+            <li>
+              <input type="radio" id="radio0" name="option" value="0" /><label
+                for="radio0"
+                id="answer0"
+              ></label>
+            </li>
+            <li>
+              <input type="radio" id="radio1" name="option" value="1" /><label
+                for="radio1"
+                id="answer1"
+              ></label>
+            </li>
+            <li>
+              <input type="radio" id="radio2" name="option" value="2" /><label
+                for="radio2"
+                id="answer2"
+              ></label>
+            </li>
+            <li>
+              <input type="radio" id="radio3" name="option" value="3" /><label
+                for="radio3"
+                id="answer3"
+              ></label>
+            </li>
+            <li>
+              <input type="radio" id="radio4" name="option" value="4" /><label
+                for="radio4"
+                id="answer4"
+              ></label>
+            </li>
+          </ul>
+          <button id="answerBtn">Відповісти</button>
+          <p id="isCorrect"></p>
+        </div>
+        <div class="explanation-container">
+          <h2 id="explanation-header">Пояснення</h2>
+          <p id="explanation-content"></p>
+        </div>
+      </div>
+      <div class="bottom-buttons">
+        <div>
+          <button id="btnPrevQ">Попередній тест</button>
+          <button id="btnNextQ">Наступний тест</button>
+        </div>
+        <div>
+          <button id="btnEnd">Завершити</button>
+        </div>
+      </div>
+    </div>
+    <div class="results-container">
+      <h2 id="result"></h2>
+      <a href="/">На головну сторінку</a>
+    </div>
+  </body>
+</html>
+
+<script type="module" src="/script.js"></script>
