@@ -17,13 +17,13 @@ const resultsContainer = document.querySelector(".results-container");
 //start demo
 const btnDemo = document.getElementById("btnDemo");
 btnDemo.addEventListener("click", function () {
+  testKey = `demo`;
   setTimeout(() => {
-    testKey = `demo`;
     keyContainer.style = "display: none";
     appContainer.style = "display: block";
     loadTotalNumberOfQuestions();
     loadTest();
-  }, 300);
+  }, 100);
 });
 
 //start test
@@ -202,7 +202,7 @@ btnPrevQ.addEventListener("click", function () {
 
 //PRESS "END"
 let btnEnd = document.getElementById("btnEnd");
-let result = document.getElementById("result")
+let result = document.getElementById("result");
 let correctAnswers = 0;
 btnEnd.addEventListener("click", function () {
   appContainer.style = "display: none";
@@ -212,5 +212,7 @@ btnEnd.addEventListener("click", function () {
       correctAnswers++;
     }
   });
-  result.innerHTML = `Ви маєте: ${Math.round(correctAnswers * 100 / totalNumberOfQuestions)}%</br>Правильних відповідей: ${correctAnswers} із ${totalNumberOfQuestions}`
+  result.innerHTML = `Ви маєте: ${Math.round(
+    (correctAnswers * 100) / totalNumberOfQuestions
+  )}%</br>Правильних відповідей: ${correctAnswers} із ${totalNumberOfQuestions}`;
 });
